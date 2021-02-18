@@ -15,6 +15,8 @@ namespace C_Sharp_Methods
             Console.WriteLine(GreetFriend("Steph"));
             Console.WriteLine(GreetFriend("Ruben"));
             Console.WriteLine(GreetFriend("Simone"));
+            Console.WriteLine(Calculate());
+
             Console.Read();
         }
         //access modifier (static) return type method name (parameter1, parameter2)
@@ -39,6 +41,20 @@ namespace C_Sharp_Methods
         public static string GreetFriend(string param){
             string friend = "Hi " + param + ", my friend!";
             return friend;
+        }
+        public static int Calculate()
+        {
+            Console.WriteLine("Please enter the first number");
+            string num1input = Console.ReadLine();
+            Console.WriteLine("Please enter the second number");
+            string num2input = Console.ReadLine();
+
+            int num1 = int.Parse(num1input);
+            int num2 = int.Parse(num2input);
+
+            int result = num1 + num2;
+            return result;
+
         }
     }
 }
