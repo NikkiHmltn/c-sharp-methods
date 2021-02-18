@@ -11,6 +11,7 @@ namespace C_Sharp_Methods
             Console.WriteLine(Add(15, 31));
             Console.WriteLine(Add(Add(1, 2), Add(3, 4)));
             Console.WriteLine(Mult(2, 8));
+            Console.WriteLine(Div(25, 13));
             Console.Read();
         }
         //access modifier (static) return type method name (parameter1, parameter2)
@@ -27,6 +28,10 @@ namespace C_Sharp_Methods
         public static int Mult(int param1, int param2)
         {
             return param1 * param2;
+        }
+        public static double Div(double param1, double param2)
+        {
+            return param1 / param2;
         }
     }
 }
