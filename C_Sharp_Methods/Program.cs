@@ -6,6 +6,7 @@ namespace C_Sharp_Methods
     {
         static void Main(string[] args)
         {
+            tryCatch();
             WriteSomething();
             WriteSpecific("Hello hello hello");
             Console.WriteLine(Add(15, 31));
@@ -55,6 +56,24 @@ namespace C_Sharp_Methods
             int result = num1 + num2;
             return result;
 
+        }
+        public static void tryCatch()
+        {
+            Console.WriteLine("Please enter a number");
+            string userInput = Console.ReadLine();
+
+            try
+            {
+                int userInputInt = int.Parse(userInput);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Format exception, please enter a number next time!");
+            }
+
+            
+
+            Console.ReadKey();
         }
     }
 }
